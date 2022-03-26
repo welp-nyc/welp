@@ -55,7 +55,7 @@ function App() {
     setCurrentPlaceId(id);
     setViewState({...viewState, latitude: lat, longitude: long});
   }
-
+  
   const handleAddClick = (e) => {
     // const [long, lat] = e.lngLat; // this is before
     const long = e.lngLat.lng;
@@ -137,16 +137,47 @@ function App() {
                 <label>Place</label>
                 <h4 className="place">{p.title}</h4>
 
+                <div>
+                  <div className="info">📍 261 Moore St&nbsp;&nbsp;</div>
+                  <div className="info">⭐️ 4.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                  <div className="info">⏰ 10 am - 11pm&nbsp;</div>
+                  <div className="info">📞 (718) 417-1118</div>
+                </div>
+
+                <img src={p.image}></img>
                 <label>Review</label>
                 <p className="desc">{p.desc}</p>
 
-                <label>Rating</label>
-                <div className="stars">
+                <label>Ratings</label>
+                {/* <p>Overall:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐️⭐️⭐️⭐️</p>
+                <br/> */}
+                <p>Cleanliness: &nbsp;🧻🧻</p>
+                <p>Comfort: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;💩💩</p>
+                
+                {/* <div>Comfort: <div className="stars">
                   {Array(p.rating).fill("💩")}
-                </div>
+                </div> */}
+                <p>Vibes: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;💅💅💅</p>
                 <label>Information</label>
                 <span className="username">Created by <b>{p.username}</b></span>
                 <span className="date">{format(p.createdAt)}</span>
+                <div className="tags">
+                  <div className="tag">
+                  💨 No Line
+                  </div>
+
+                  <div className="tag">
+                    🚻 Spacious
+                  </div>
+
+                  <div className="tag">
+                  🔮 Ambience
+                  </div>
+
+                  <div className="tag">
+                  🪞 No Mirror
+                  </div>
+                </div>
               </div>
             </Popup>
             )
@@ -215,13 +246,6 @@ function App() {
         )}
       </Map>
       
-      // <div className="App">
-      //   {/* <Map
-      //     {...viewport}
-      //     mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
-      //     onViewportChange={nextViewport => setViewport(nextViewport)}
-      //   /> */}
-      // </div>
     </div>
   );
 }

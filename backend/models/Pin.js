@@ -29,6 +29,22 @@ const PinSchema = new mongoose.Schema({
     long: {
       type: Number,
       required: true
+    },
+    address: {
+      type: String,
+      required: false
+    },
+    hours: {
+      type: String,
+      required: false
+    },
+    phone: {
+      type: String,
+      required: false
+    },
+    image: {
+      type: String,
+      required: false
     }
   },
   { timestamps: true }
