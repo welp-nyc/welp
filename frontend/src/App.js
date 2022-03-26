@@ -138,9 +138,9 @@ function App() {
                 <h4 className="place">{p.title}</h4>
 
                 <div>
-                  <div className="info">📍 261 Moore Street&nbsp;&nbsp;</div>
+                  <div className="info">📍 261 Moore Street&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                   <div className="info">⭐️ 4.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                  <div className="info">⏰ 10 am - 11pm&nbsp;</div>
+                  <div className="info">⏰ 10 am - 11 pm&nbsp;&nbsp;&nbsp;&nbsp;</div>
                   <div className="info">📞 (718) 417-1118</div>
                 </div>
 
