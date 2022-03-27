@@ -16,11 +16,9 @@ const PinSchema = new mongoose.Schema({
       required: true,
       min: 3
     },
-    rating: {
-      type: Number,
-      required: true,
-      min: 0,
-      max: 5
+    address: {
+      type: String,
+      required: false
     },
     lat: {
       type: Number,
@@ -30,9 +28,11 @@ const PinSchema = new mongoose.Schema({
       type: Number,
       required: true
     },
-    address: {
-      type: String,
-      required: false
+    rating: {
+      type: Number,
+      required: true,
+      min: 0,
+      max: 5
     },
     hours: {
       type: String,
@@ -44,6 +44,26 @@ const PinSchema = new mongoose.Schema({
     },
     image: {
       type: String,
+      required: false
+    },
+    review: {
+      type: String,
+      required: false
+    },
+    cleanliness: {
+      type: Number,
+      required: false
+    },
+    comfort: {
+      type: Number,
+      required: false
+    },
+    vibes: {
+      type: Number,
+      required: false
+    },
+    tags: {
+      type: [String],
       required: false
     }
   },
