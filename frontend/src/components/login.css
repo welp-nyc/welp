@@ -17,7 +17,7 @@
 }
 
 .logo {
-  color: teal;
+  color: tomato;
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -28,7 +28,7 @@
   padding: 5px;
   border-radius: 5px;
   color: white;
-  background-color: teal;
+  background-color: rgb(174, 183, 6);
   cursor: pointer;
 }
 

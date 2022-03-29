@@ -136,3 +136,29 @@ input::placeholder, textarea::placeholder {
   margin: 5px; 
   /* display: flex; */
 }
+
+/* Filters */
+
+.filters {
+  position: absolute;
+  bottom: 90px;
+  left: 10px;
+}
+
+.filter {
+  background-color: white;
+  color: black;
+  border: none;
+  margin: 5;
+  padding: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.all {
+  padding-left: 15px;
+  padding-right: 15px;
+}

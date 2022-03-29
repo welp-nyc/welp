@@ -13,12 +13,6 @@ import SimpleImageSlider from "react-simple-image-slider";
 
 function App() {
 
-  const images = [
-    { url: "https://raw.githubusercontent.com/sonnynomnom/welp/main/restrooms/brooklyn/bagel_pub_park_slope.png" },
-    { url: "https://raw.githubusercontent.com/sonnynomnom/welp/main/restrooms/brooklyn/bagel_pub_park_slope2.png" },
-    { url: "https://raw.githubusercontent.com/sonnynomnom/welp/main/restrooms/brooklyn/bagel_pub_park_slope3.png" },
-  ];
-
   const myStorage = window.localStorage;
 
   const [currentUser, setCurrentUser] = useState(myStorage.getItem("user"));;
@@ -216,7 +210,7 @@ function App() {
           </div>
         </Popup>
         )}
-        {currentUser ? (
+        {/* {currentUser ? (
           <button className="button logout" onClick={handleLogout}>Log out</button>
         ) : (
           <div className="buttons">
@@ -239,9 +233,14 @@ function App() {
             myStorage={myStorage} 
             setCurrentUser={setCurrentUser}
           />
-        )}
+        )} */}
+        {/* Filters */}
+        <div className="filters">
+          <button className="filter all">All</button>
+          <button className="filter public">🌎 Public</button>
+          <button className="filter restaurant">🍕 Restaurant</button>
+        </div>
       </Map>
-      
     </div>
   );
 }
