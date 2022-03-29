@@ -43,7 +43,7 @@ const PinSchema = new mongoose.Schema({
       required: false
     },
     image: {
-      type: String,
+      type: [String],
       required: false
     },
     review: {

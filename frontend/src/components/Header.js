@@ -98,8 +98,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>🚾 Submit a Restroom</MenuItem>
+      <MenuItem onClick={handleMenuClose}>🔍 Report a Bug</MenuItem>
     </Menu>
   );
 
@@ -172,7 +172,7 @@ export default function PrimarySearchAppBar() {
             variant="h6"
             noWrap
             component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
+            sx={{ display: { xs: 'none', sm: 'block' }, fontFamily: 'Poppins' }}
           >
             🧻 Welp
           </Typography>

@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import Map, { Marker, Popup } from 'react-map-gl';
-import FmdGoodIcon from '@mui/icons-material/FmdGood';
-import StarIcon from '@mui/icons-material/Star';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './app.css';
 import axios from "axios";
@@ -10,8 +9,15 @@ import {format} from "timeago.js";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Header from "./components/Header";
+import SimpleImageSlider from "react-simple-image-slider";
 
 function App() {
+
+  const images = [
+    { url: "https://raw.githubusercontent.com/sonnynomnom/welp/main/restrooms/brooklyn/bagel_pub_park_slope.png" },
+    { url: "https://raw.githubusercontent.com/sonnynomnom/welp/main/restrooms/brooklyn/bagel_pub_park_slope2.png" },
+    { url: "https://raw.githubusercontent.com/sonnynomnom/welp/main/restrooms/brooklyn/bagel_pub_park_slope3.png" },
+  ];
 
   const myStorage = window.localStorage;
 
@@ -27,7 +33,6 @@ function App() {
   
   const [showRegister, setShowRegister] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
-
 
   const [showPopup, setShowPopup] = React.useState(true);
 
@@ -51,6 +56,7 @@ function App() {
     getPins();
   }, []);
 
+  // When the user click on a marker
   const handleMarkerClick = (id, lat, long) => {
     setCurrentPlaceId(id);
     setViewState({...viewState, latitude: lat, longitude: long});
@@ -95,11 +101,6 @@ function App() {
     <div className="App">
       <Header/>
       <Map
-        // initialViewState={{
-        //   latitude: 40.7128,
-        //   longitude: -74.006,
-        //   zoom: 12
-        // }}
         {...viewState}
         style={{width: "100vw", height: "100vh"}}
         mapStyle="mapbox://styles/sonnynomnom/cl140ktw8000c15qyyzbezy1u"
@@ -116,70 +117,66 @@ function App() {
             offsetLeft={-viewState.zoom*1.5}
             offsetTop={-viewState.zoom*3}
           >
-            <FmdGoodIcon 
+            <LocationOnIcon 
               style={{
                 fontSize: viewState.zoom * 3, 
-                color: p.username === currentUser ? "tomato" : "slateblue", 
+                color: p.username === currentUser ? "slateblue" : "tomato", 
                 cursor: "pointer"}}
               onClick={()=>handleMarkerClick(p._id, p.lat, p.long)}
             />
           </Marker>
           {p._id === currentPlaceId && (
-            <Popup 
-              latitude={p.lat}
-              longitude={p.long}
-              closeButton={true}
-              closeOnClick={false}
-              onClose={() => setCurrentPlaceId(null)}
-              anchor="left"
-            >
+            // <Popup 
+            //   latitude={p.lat}
+            //   longitude={p.long}
+            //   closeButton={true}
+            //   closeOnClick={false}
+            //   onClose={() => setCurrentPlaceId(null)}
+            //   anchor="left"
+            // >
+             <div className="popup">
               <div className="card">
-                {/* <label>Place</label> */}
-                <h4 className="place">{p.title}</h4>
-
-                <div>
-                  <div className="info"><img src="./pin.svg"></img> 261 Moore St, Brooklyn, NY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                  <div className="info"><img src="./star.svg"></img> 4.4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                  <div className="info"><img src="./clock.svg"></img> 10 am - 11 pm&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                  <div className="info"><img src="./phone.svg"></img> (718) 417-1118</div>
-                </div>
-
-                <img src={p.image}></img>
-                <label>Review</label>
+                <h3 className="place">{p.title}</h3>
                 <p className="desc">{p.desc}</p>
 
+                <div>
+                  <a href={"https://maps.google.com/?q=" + p.address} target="_blank"><div className="info"><img className="icons" src="./pin.svg"></img>{p.address}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></a>
+                  <div className="info"><img className="icons" src="./star.svg"></img>{p.rating}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                  <div className="info"><img className="icons" src="./clock.svg"></img>{p.hours}&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                  <div className="info"><img className="icons" src="./phone.svg"></img>{p.phone}</div>
+                </div>
+
+                {/* <img className="picture" src={p.image}></img> */}
+
+                <SimpleImageSlider
+                  width={300}
+                  height={250}
+                  images={images}
+                  // showBullets={true}
+                  showNavs={true}
+                  navSize={30}
+                  navMargin={10}
+                  loop={true}
+                />
+
+                <label>Review</label>
+                <p className="desc">{p.review}</p>
+
                 <label>Ratings</label>
-                {/* <p>Overall:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐️⭐️⭐️⭐️</p>
-                <br/> */}
-                <p>Cleanliness: &nbsp;🧻🧻</p>
-                <p>Comfort: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;💩💩</p>
-                
-                {/* <div>Comfort: <div className="stars">
-                  {Array(p.rating).fill("💩")}
-                </div> */}
-                <p>Vibes: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;💅💅💅</p>
+                <p>Cleanliness: &nbsp;&nbsp;{Array(p.cleanliness).fill("🧻")}</p>
+                <p>Comfort: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Array(p.comfort).fill("💩")}</p>
+                <p>Vibes: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Array(p.vibes).fill("💅")}</p>
+
                 <label>Information</label>
                 <span className="username">Created by <b>{p.username}</b></span>
                 <span className="date">{format(p.createdAt)}</span>
+
                 <div className="tags">
-                  <div className="tag">
-                  💨 No Line
-                  </div>
-
-                  <div className="tag">
-                    🚻 Spacious
-                  </div>
-
-                  <div className="tag">
-                  🔮 Ambience
-                  </div>
-
-                  <div className="tag">
-                  🪞 No Mirror
-                  </div>
+                  {p.tags.map((tag) => <div className="tag">{tag}</div>)}
                 </div>
               </div>
-            </Popup>
+            {/* </Popup> */}
+            </div>
             )
           }
           </>
@@ -235,7 +232,6 @@ function App() {
             </button>
           </div>
         )}
-        <h1>Welp</h1>
         {showRegister && <Register setShowRegister={setShowRegister} />}
         {showLogin && (
           <Login 

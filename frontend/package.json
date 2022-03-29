@@ -18,6 +18,7 @@
     "react-dom": "^17.0.2",
     "react-map-gl": "^7.0.10",
     "react-scripts": "5.0.0",
+    "react-simple-image-slider": "^2.4.1",
     "timeago.js": "^4.0.2",
     "web-vitals": "^2.1.4"
   },
