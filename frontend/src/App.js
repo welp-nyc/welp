@@ -134,7 +134,7 @@ function App() {
             //   onClose={() => setCurrentPlaceId(null)}
             //   anchor="left"
             // >
-             <div className="popup">
+            <div className="popup">
               <div className="card">
                 <h3 className="place">{p.title}</h3>
                 <p className="desc">{p.desc}</p>
@@ -149,13 +149,13 @@ function App() {
                 <div className="picture">
                   <SimpleImageSlider
                     width={300}
-                    height={250}
+                    height={225}
                     images={p.image}
-                    // showBullets={true}
                     showNavs={true}
                     navSize={30}
                     navMargin={10}
                     loop={false}
+                    // showBullets={true}
                   />
                 </div>
 
