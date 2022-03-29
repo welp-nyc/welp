@@ -1,5 +1,6 @@
 # Tags
 
+```
 🌎 Public
 🏠 Spacious
 👶🏼 Baby Changing Station
@@ -14,3 +15,4 @@
 📦 Claustropobic
 🤮 Stanky
 💦 Wet
+```
