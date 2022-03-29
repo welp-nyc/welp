@@ -1,13 +1,16 @@
 # Tags
 
-🏠 Spacious
-🍼 Baby Changing Station
 🌎 Public
+🏠 Spacious
+👶🏼 Baby Changing Station
 🪞 No Mirror
 💨 No Line
+🗑 No Trash
 🍁 NYC Parks
 🕳 Basement
-✋ Grab bar
+✋ Grab Bar
 🔮 Ambience
 🕯 Candles
+📦 Claustropobic
 🤮 Stanky
+💦 Wet

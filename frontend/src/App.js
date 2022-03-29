@@ -187,7 +187,13 @@ function App() {
             <form onSubmit={handleSubmit}>
               <label>Title</label>
               <input 
-                placeholder="Enter a title" 
+                placeholder="Enter the name of the restroom" 
+                onChange={(e)=>setTitle(e.target.value)}
+              /> 
+
+              <label>Description</label>
+              <input 
+                placeholder="Enter the description of the restroom" 
                 onChange={(e)=>setTitle(e.target.value)}
               />
 
@@ -205,7 +211,7 @@ function App() {
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
-              <button className="submitButton" type="submit">Add Pin</button>
+              <button className="submitButton" type="submit">Add Restroom</button>
             </form>
           </div>
         </Popup>

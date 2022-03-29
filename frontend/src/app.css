@@ -12,6 +12,19 @@
   /* box-shadow: 1px 1px 0px 0px #373737; */
 }
 
+@media only screen and (max-width: 960px) {
+  .popup {
+    position: absolute;
+    top: initial;
+    right: initial;
+    bottom: 0;
+    width: 80%;
+    height: 45vh;
+    padding: 40px;
+    border-radius: 40px;
+  }
+}
+
 .card {
   /* width: 300s0px;
   height: 600px; */
@@ -143,6 +156,13 @@ input::placeholder, textarea::placeholder {
   position: absolute;
   bottom: 90px;
   left: 10px;
+}
+
+@media only screen and (max-width: 960px) {
+  .filters {
+    position: absolute;
+    bottom: 320px;
+  }
 }
 
 .filter {
