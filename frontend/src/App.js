@@ -146,18 +146,18 @@ function App() {
                   <div className="info"><img className="icons" src="./phone.svg"></img>{p.phone}</div>
                 </div>
 
-                {/* <img className="picture" src={p.image}></img> */}
-
-                <SimpleImageSlider
-                  width={300}
-                  height={250}
-                  images={images}
-                  // showBullets={true}
-                  showNavs={true}
-                  navSize={30}
-                  navMargin={10}
-                  loop={true}
-                />
+                <div className="picture">
+                  <SimpleImageSlider
+                    width={300}
+                    height={250}
+                    images={p.image}
+                    // showBullets={true}
+                    showNavs={true}
+                    navSize={30}
+                    navMargin={10}
+                    loop={false}
+                  />
+                </div>
 
                 <label>Review</label>
                 <p className="desc">{p.review}</p>
