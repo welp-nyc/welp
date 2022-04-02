@@ -98,8 +98,9 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>🚾 Submit a Restroom</MenuItem>
-      <MenuItem onClick={handleMenuClose}>🔍 Report a Bug</MenuItem>
+      {/* <script async src="https://tally.so/widgets/embed.js"></script> */}
+      <MenuItem onClick={handleMenuClose}>🚾 &nbsp;<a href="https://tally.so/r/mBrGQm" target="_blank">Submit a Restroom</a></MenuItem>
+      <MenuItem onClick={handleMenuClose}>🔍 &nbsp;<a href="https://tally.so/r/3Naojm" target="_blank">Report a Bug</a></MenuItem>
     </Menu>
   );
 
