@@ -11,7 +11,7 @@
 🕳 Basement
 ✋ Grab Bar
 🔮 Ambience
-🕯 Candles
+🕯 Candle
 📦 Claustropobic
 🤮 Stanky
 💦 Wet
