@@ -15,4 +15,5 @@
 📦 Claustropobic
 🤮 Stanky
 💦 Wet
+🔐 Code
 ```
