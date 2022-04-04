@@ -178,7 +178,8 @@ export default function PrimarySearchAppBar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' }, fontFamily: 'Poppins' }}
           >
-            🧻 Welp
+            {/* 🧻 Welp */}
+            <img src="https://raw.githubusercontent.com/sonnynomnom/welp/main/frontend/public/welp_logo.png" height="50"></img>
           </Typography>
           <Search>
             <SearchIconWrapper>
