@@ -2,6 +2,8 @@
 
 Find and review restrooms near you (NYC)
 
+![screenshot](https://raw.githubusercontent.com/sonnynomnom/welp/main/screenshot.png)
+
 In one terminal tab:
 
 ```
