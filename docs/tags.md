@@ -1,4 +1,4 @@
-# Tags
+# Restroom Tags
 
 ```
 🌎 Public
