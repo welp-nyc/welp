@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import Map, { Marker, Popup } from 'react-map-gl';
+import Map, { Marker, Popup, GeolocateControl } from 'react-map-gl';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './app.css';
@@ -246,6 +246,13 @@ function App() {
           <button className="filter public">🌎 Public</button>
           <button className="filter restaurant">🍕 Restaurant</button>
         </div>
+
+        <GeolocateControl
+            positionOptions={{ enableHighAccuracy: true }}
+            position={'top-left'}
+            showUserLocation={true}
+            showUserHeading={true}
+          />
       </Map>
     </div>
   );
