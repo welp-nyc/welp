@@ -23,4 +23,5 @@ Comment tags:
 🔐 _ _ _ _ _ 
 💨 No Line
 🕰 Wait
+🚫 Closed
 ```
