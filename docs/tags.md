@@ -5,15 +5,22 @@
 🏠 Spacious
 👶🏼 Baby Changing Station
 🪞 No Mirror
-💨 No Line
 🗑 No Trash
 🍁 NYC Parks
 🕳 Basement
 ✋ Grab Bar
 🔮 Ambience
 🕯 Candle
-📦 Claustropobic
+📦 Claustrophobic
 🤮 Stanky
 💦 Wet
 🔐 Code
+```
+
+Comment tags:
+
+```
+🔐 _ _ _ _ _ 
+💨 No Line
+🕰 Wait
 ```
