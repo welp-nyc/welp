@@ -15,6 +15,7 @@
 🤮 Stanky
 💦 Wet
 🔐 Code
+♿️ Accessible
 ```
 
 Comment tags:
