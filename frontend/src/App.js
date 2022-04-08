@@ -96,7 +96,7 @@ function App() {
       <Header/>
       <Map
         {...viewState}
-        style={{width: "100vw", height: "100vh"}}
+        style={{width: "100vw", height: "100%"}}
         mapStyle="mapbox://styles/sonnynomnom/cl140ktw8000c15qyyzbezy1u"
         mapboxAccessToken={process.env.REACT_APP_MAPBOX}
         onMove={evt => setViewState(evt.viewState)}
