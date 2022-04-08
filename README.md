@@ -18,4 +18,6 @@ cd backend
 yarn start
 ```
 
+Requires an `.env` file for mapbox in `frontend` folder and an `.env` file for mongo in `backend` folder.
+
 Tags: [tags.md](https://github.com/sonnynomnom/welp/blob/main/docs/tags.md)
