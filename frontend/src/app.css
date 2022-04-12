@@ -164,7 +164,7 @@ input::placeholder, textarea::placeholder {
 }
 
 @media only screen and (max-width: 960px) {
-  .filters {
+  .filters.active {
     bottom: calc(45vh + 90px);
   }
 }
