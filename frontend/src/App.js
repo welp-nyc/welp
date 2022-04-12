@@ -33,8 +33,8 @@ function App() {
   const [viewState, setViewState] = useState({
     // width: "70vh",
     // height: "100vh",
-    latitude: 40.7128,
-    longitude: -74.006,
+    latitude: 40.702470,
+    longitude: -73.971816,
     zoom: 12
   });
     
@@ -244,7 +244,10 @@ function App() {
         <div className="filters">
           <button className="filter all">All</button>
           <button className="filter public">🌎 Public</button>
-          <button className="filter restaurant">🍕 Restaurant</button>
+          <button className="filter restaurant">🍕 Food</button>
+          <button className="filter accessible">⭐️ 4+</button>
+          <button className="filter accessible">⭐️ 3+</button>
+          <button className="filter accessible">♿️</button>
         </div>
 
         <GeolocateControl
