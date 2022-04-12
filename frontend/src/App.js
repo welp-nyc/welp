@@ -241,7 +241,7 @@ function App() {
           />
         )} */}
         {/* Filters */}
-        <div className="filters">
+        <div className={currentPlaceId ? "filters active" : "filters"}>
           <button className="filter all">All</button>
           <button className="filter public">🌎 Public</button>
           <button className="filter restaurant">🍕 Food</button>
