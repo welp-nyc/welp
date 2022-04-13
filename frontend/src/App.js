@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import Map, { Marker, Popup, GeolocateControl } from 'react-map-gl';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './app.css';
 import axios from "axios";
@@ -10,6 +9,11 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import Header from "./components/Header";
 import SimpleImageSlider from "react-simple-image-slider";
+import RoomTwoToneIcon from '@mui/icons-material/RoomTwoTone';
+import FmdGoodTwoToneIcon from '@mui/icons-material/FmdGoodTwoTone';
+import RoomRoundedIcon from '@mui/icons-material/RoomRounded';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import RoomIcon from '@mui/icons-material/Room';
 
 function App() {
 
@@ -111,12 +115,13 @@ function App() {
             offsetLeft={-viewState.zoom*1.5}
             offsetTop={-viewState.zoom*3}
           >
-            <LocationOnIcon 
+            <RoomIcon
               style={{
                 fontSize: viewState.zoom * 3, 
                 color: p.username === currentUser ? "slateblue" : "tomato", 
                 cursor: "pointer"}}
               onClick={()=>handleMarkerClick(p._id, p.lat, p.long)}
+              stroke={"#707070"} stroke-width={0.5}
             />
           </Marker>
           {p._id === currentPlaceId && (
