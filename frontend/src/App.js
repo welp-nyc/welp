@@ -121,7 +121,7 @@ function App() {
                 color: p.username === currentUser ? "slateblue" : "tomato", 
                 cursor: "pointer"}}
               onClick={()=>handleMarkerClick(p._id, p.lat, p.long)}
-              stroke={"#707070"} stroke-width={0.5}
+              stroke={"#707070"} stroke-width={0.4}
             />
           </Marker>
           {p._id === currentPlaceId && (

@@ -23,10 +23,10 @@
     top: initial;
     right: initial;
     bottom: 0;
-    width: 80%;
+    width: calc(100% - 80px);
     height: 45vh;
     padding: 40px;
-    border-radius: 40px;
+    border-radius: 35px;
   }
 }
 
