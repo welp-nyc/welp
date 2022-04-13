@@ -8,6 +8,7 @@ In one terminal tab:
 
 ```
 cd frontend
+yarn install
 yarn start
 ```
 
@@ -15,6 +16,7 @@ In another:
 
 ```
 cd backend
+yarn install
 yarn start
 ```
 
