@@ -30,6 +30,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/frontend/build', 'index.html'));
 });
 
-app.listen(process.env.PORT || 80, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Backend server is running!");
 });

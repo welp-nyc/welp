@@ -1,0 +1,4 @@
+dist
+example/index.js
+*.json
+.babelrc
