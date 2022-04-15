@@ -3,7 +3,7 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import { useRef, useState } from "react";
 // import axios from "axios";
 import "./register.css"
-import { axiosInstance } from './config';
+import { axiosInstance } from '../config';
 
 
 export default function Register({setShowRegister}) {
