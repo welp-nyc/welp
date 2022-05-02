@@ -4,24 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@mapbox/node-pre-gyp": "^1.0.9",
-    "bcryptjs": "^2.4.3",
+    "bcrypt": "^5.0.1",
     "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "mongoose": "^6.2.11",
-    "n": "^8.1.0",
-    "node-gyp": "^9.0.0",
-    "nodemon": "^2.0.15",
-    "path": "^0.12.7"
-  },
-  "engines": {
-    "node": "16.x",
-    "npm": "8.5.0"
+    "nodemon": "^2.0.15"
   }
 }

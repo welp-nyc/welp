@@ -1,0 +1,188 @@
+.App {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.popup {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: white;
+  width: 300px;
+  height: 80vh;
+  border-radius: 20px;
+  padding: 16px;
+  overflow-x:hidden;
+  overflow-y:auto;
+  /* box-shadow: 1px 1px 0px 0px #373737; */
+}
+
+@media only screen and (max-width: 960px) {
+  .popup {
+    position: absolute;
+    top: initial;
+    right: initial;
+    bottom: 0;
+    width: 80%;
+    height: 45vh;
+    padding: 40px;
+    border-radius: 40px;
+  }
+}
+
+.card {
+  /* width: 300s0px;
+  height: 600px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* overflow-x: hidden;
+  margin:5px; */
+}
+
+label {
+  width: max-content;
+  color: tomato;
+  font-size: 13px;
+  border-bottom: .5px solid tomato;
+  margin: 3px 0;
+}
+
+.desc {
+  font-size: 14;
+  color: #3D3D3D;
+  padding-bottom: 8px;
+}
+
+.icons {
+  width: 14px;
+  height: 14px;
+  padding-right: 6px;
+  position: relative;
+  top: 2px;
+}
+
+.picture {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.star {
+  color: gold;
+}
+
+.username {
+  font-size: 14px;
+}
+
+.date {
+  font-size: 12px;
+}
+
+form {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+input, textarea {
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+input::placeholder, textarea::placeholder {
+  font-size: 12px;
+  color: rgb(172, 169, 169);
+}
+
+.submitButton {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  background-color: tomato;
+  cursor: pointer;
+}
+
+/* Buttons */
+
+.button {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.logout {
+  background-color: tomato;
+}
+
+.login {
+  background-color: teal;
+  margin-right: 10px;
+}
+
+.register {
+  background-color: slateblue;
+}
+
+.buttons, .logout {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.info {
+  display: inline-block;
+  width: fit-content;
+}
+
+.tags {
+  padding-top: 5px;
+}
+
+.tag {
+  display: inline-block;
+  width: fit-content;
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 5px; 
+  /* display: flex; */
+}
+
+/* Filters */
+
+.filters {
+  position: absolute;
+  bottom: 90px;
+  left: 10px;
+}
+
+@media only screen and (max-width: 960px) {
+  .filters.active {
+    bottom: calc(45vh + 90px);
+  }
+}
+
+.filter {
+  background-color: white;
+  color: black;
+  border: none;
+  margin: 5;
+  padding: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.all {
+  padding-left: 15px;
+  padding-right: 15px;
+}
