@@ -121,7 +121,7 @@ function App() {
                 color: p.username === currentUser ? "slateblue" : "tomato", 
                 cursor: "pointer"}}
               onClick={()=>handleMarkerClick(p._id, p.lat, p.long)}
-              stroke={"#707070"} stroke-width={0.5}
+              stroke={"#707070"} stroke-width={0.4}
             />
           </Marker>
           {p._id === currentPlaceId && (
@@ -250,7 +250,6 @@ function App() {
           <button className="filter all">All</button>
           <button className="filter public">🌎 Public</button>
           <button className="filter restaurant">🍕 Food</button>
-          <button className="filter accessible">⭐️ 4+</button>
           <button className="filter accessible">⭐️ 3+</button>
           <button className="filter accessible">♿️</button>
         </div>
