@@ -251,7 +251,6 @@ function App() {
           <button className="filter all">All</button>
           <button className="filter public">🌎 Public</button>
           <button className="filter restaurant">🍕 Food</button>
-          <button className="filter accessible">⭐️ 4+</button>
           <button className="filter accessible">⭐️ 3+</button>
           <button className="filter accessible">♿️</button>
         </div>
