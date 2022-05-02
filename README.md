@@ -1,4 +1,4 @@
-# Wep
+# Welp
 
 Find and review restrooms near you (NYC)
 
