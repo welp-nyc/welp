@@ -57,7 +57,8 @@ function App() {
   // When the user click on a marker
   const handleMarkerClick = (id, lat, long) => {
     setCurrentPlaceId(id);
-    setViewState({...viewState, latitude: lat, longitude: long});
+    // Commenting this out
+    // setViewState({...viewState, latitude: lat, longitude: long});
   }
   
   const handleAddClick = (e) => {
