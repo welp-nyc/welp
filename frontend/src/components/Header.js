@@ -16,6 +16,9 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import "./header.css";
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TikTokIcon from './tiktok.svg';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -198,6 +201,34 @@ export default function PrimarySearchAppBar() {
                 <MailIcon />
               </Badge>
             </IconButton> */}
+            {/* Twitter */}
+            <IconButton
+              size="large"
+              color="inherit"
+              href="https://www.twitter.com/welp_nyc"
+              target="_blank"
+            >
+              <TwitterIcon />
+            </IconButton>
+
+            <IconButton
+              size="large"
+              color="inherit"
+              href="https://www.instagram.com/welp.nyc"
+              target="_blank"
+            >
+              <InstagramIcon />
+            </IconButton>
+
+            {/* <IconButton
+              size="large"
+              color="inherit"
+              href="https://www.tiktok.com/@welp.nyc"
+              target="_blank"
+            >
+              <img src={TikTokIcon} width="20" color="#ffffff"/>
+            </IconButton>
+
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
@@ -206,7 +237,8 @@ export default function PrimarySearchAppBar() {
               <Badge badgeContent={2} color="error">
                 <NotificationsIcon />
               </Badge>
-            </IconButton>
+            </IconButton> */}
+            
             <IconButton
               size="large"
               edge="end"
